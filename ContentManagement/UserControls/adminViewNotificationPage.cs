@@ -26,5 +26,10 @@ namespace ContentManagement.UserControls
         {
 
         }
+
+        private void adminViewNotificationPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

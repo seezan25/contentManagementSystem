@@ -44,10 +44,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(74, 195);
+            this.button1.Location = new System.Drawing.Point(174, 141);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 34);
+            this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = false;
@@ -56,10 +57,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(74, 346);
+            this.button2.Location = new System.Drawing.Point(174, 292);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 34);
+            this.button2.Size = new System.Drawing.Size(133, 48);
             this.button2.TabIndex = 1;
             this.button2.Text = "Edit";
             this.button2.UseVisualStyleBackColor = false;
@@ -68,24 +70,26 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(74, 472);
+            this.button3.Location = new System.Drawing.Point(174, 418);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 34);
+            this.button3.Size = new System.Drawing.Size(133, 48);
             this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SN,
             this.contentName,
             this.content});
-            this.dataGridView1.Location = new System.Drawing.Point(328, 265);
+            this.dataGridView1.Location = new System.Drawing.Point(514, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(342, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(342, 496);
             this.dataGridView1.TabIndex = 3;
             // 
             // SN
@@ -110,10 +114,11 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(891, 180);
+            this.panel1.Location = new System.Drawing.Point(952, 136);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 337);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // uploaderUploadPage
             // 
@@ -127,6 +132,7 @@
             this.Controls.Add(this.button1);
             this.Name = "uploaderUploadPage";
             this.Size = new System.Drawing.Size(1370, 678);
+            this.Load += new System.EventHandler(this.uploaderUploadPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

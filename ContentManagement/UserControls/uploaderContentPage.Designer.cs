@@ -39,27 +39,29 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(206, 12);
+            this.panel1.Location = new System.Drawing.Point(355, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 54);
+            this.panel1.Size = new System.Drawing.Size(660, 67);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(234, 20);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(410, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Content 1";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 47);
+            this.button1.Size = new System.Drawing.Size(247, 61);
             this.button1.TabIndex = 0;
             this.button1.Text = "Click to Read";
             this.button1.UseVisualStyleBackColor = false;
@@ -73,6 +75,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "uploaderContentPage";
             this.Size = new System.Drawing.Size(1370, 678);
+            this.Load += new System.EventHandler(this.uploaderContentPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

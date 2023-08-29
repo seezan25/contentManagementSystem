@@ -38,9 +38,9 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
-            this.button4.Location = new System.Drawing.Point(117, 243);
+            this.button4.Location = new System.Drawing.Point(87, 242);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 34);
+            this.button4.Size = new System.Drawing.Size(133, 48);
             this.button4.TabIndex = 14;
             this.button4.Text = "Upload";
             this.button4.UseVisualStyleBackColor = false;
@@ -52,6 +52,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 20);
             this.textBox2.TabIndex = 13;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -64,18 +65,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.Location = new System.Drawing.Point(70, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(66, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Content";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(70, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Content Name";
             // 

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ContentManagement.UserControls
 {
-    public partial class verifierProfileEditPage : UserControl
+    public partial class verifierEditProfilePage : UserControl
     {
-        public verifierProfileEditPage()
+        public verifierEditProfilePage()
         {
             InitializeComponent();
+        }
+
+        private void verifierEditProfilePage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

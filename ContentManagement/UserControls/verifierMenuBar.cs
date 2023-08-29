@@ -17,15 +17,11 @@ namespace ContentManagement.UserControls
         private verifierMenuBar verifierMenu;
         private viewerContentPage verifierContent;
         private verifierNotificationPage verifierNotification;
-        private verifierProfilePage verifierProfile;
         public verifierMenuBar()
         {
             InitializeComponent();
             verifierHome = new verifierHomePage();
             addUserControl2(verifierHome);
-            verifierProfile = new verifierProfilePage();
-            addUserControl3(verifierProfile);
-
         }
         private void addUserControl(UserControl userControl)
         {
@@ -61,9 +57,6 @@ namespace ContentManagement.UserControls
         {
             verifierHome = new verifierHomePage();
             addUserControl2(verifierHome);
-            verifierProfile = new verifierProfilePage();
-            addUserControl(verifierProfile);
-
         }
 
         private void label2_Click(object sender, EventArgs e)

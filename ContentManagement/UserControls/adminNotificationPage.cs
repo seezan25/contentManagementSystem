@@ -20,16 +20,16 @@ namespace ContentManagement.UserControls
         }
         private void addUserControl(UserControl userControl)
         {
-            adminNotification = new adminNotificationPage();
             userControl.Dock = DockStyle.Fill;
-            adminNotification.Controls.Clear();
-            adminNotification.Controls.Add(adminViewNotification);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(adminViewNotification);
             userControl.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            adminViewNotification = new adminViewNotificationPage();
+            addUserControl(adminViewNotification);
         }
     }
 }

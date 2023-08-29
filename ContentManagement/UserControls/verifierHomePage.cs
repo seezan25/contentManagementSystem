@@ -12,18 +12,16 @@ namespace ContentManagement.UserControls
 {
     public partial class verifierHomePage : UserControl
     {
-        private verifierProfilePage verifierProfile;
+        private verifierEditProfilePage verifierEditProfile;
         public verifierHomePage()
         {
             InitializeComponent();
-            verifierProfile = new verifierProfilePage();
-            addUserControl(verifierProfile);
         }
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(userControl);
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userControl);
             userControl.BringToFront();
         }
 
@@ -47,15 +45,15 @@ namespace ContentManagement.UserControls
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
-            verifierProfile = new verifierProfilePage();
-            addUserControl(verifierProfile);
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            verifierEditProfile = new verifierEditProfilePage();
+            addUserControl(verifierEditProfile);
         }
     }
 }

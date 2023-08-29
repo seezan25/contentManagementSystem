@@ -41,6 +41,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SN,
@@ -50,9 +51,9 @@
             this.username,
             this.email,
             this.content});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 165);
+            this.dataGridView1.Location = new System.Drawing.Point(368, 40);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(634, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(634, 539);
             this.dataGridView1.TabIndex = 0;
             // 
             // SN

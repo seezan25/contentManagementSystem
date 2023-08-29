@@ -38,9 +38,10 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
-            this.button4.Location = new System.Drawing.Point(109, 244);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button4.Location = new System.Drawing.Point(82, 251);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 34);
+            this.button4.Size = new System.Drawing.Size(133, 48);
             this.button4.TabIndex = 9;
             this.button4.Text = "Upload";
             this.button4.UseVisualStyleBackColor = false;
@@ -49,7 +50,7 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox2.Location = new System.Drawing.Point(68, 187);
+            this.textBox2.Location = new System.Drawing.Point(68, 184);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 20);
             this.textBox2.TabIndex = 8;
@@ -58,7 +59,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.textBox1.Location = new System.Drawing.Point(68, 76);
+            this.textBox1.Location = new System.Drawing.Point(68, 73);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 20);
             this.textBox1.TabIndex = 7;
@@ -67,9 +68,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 159);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(65, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(66, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Content";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -77,9 +79,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 45);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(65, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Content Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);

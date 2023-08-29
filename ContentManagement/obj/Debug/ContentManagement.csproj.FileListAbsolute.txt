@@ -2,7 +2,6 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\ContentManagement.exe
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\ContentManagement.pdb
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.csproj.AssemblyReference.cache
-D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.csproj.SuggestedBindingRedirects.cache
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.Form1.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.Properties.Resources.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminContentPage.resources
@@ -39,5 +38,5 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminVerifierEditPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderEditContentPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderUploadContentPage.resources
-D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierProfileEditPage.resources
-D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierProfilePage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderEditProfilePage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierEditProfilePage.resources
