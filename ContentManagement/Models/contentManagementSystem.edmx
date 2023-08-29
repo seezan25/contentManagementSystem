@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="contentManagementSystem.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="contentManagementSystemStoreContainer">
+    <EntitySet Name="Uploaders" EntityType="contentManagementSystem.Store.Uploaders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contents" EntityType="contentManagementSystem.Store.Contents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Admins" EntityType="contentManagementSystem.Store.Admins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Verifiers" EntityType="contentManagementSystem.Store.Verifiers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Logins" EntityType="contentManagementSystem.Store.Logins" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UploaderContent" Association="contentManagementSystem.Store.UploaderContent">
+      <End Role="Uploader" EntitySet="Uploaders" />
+      <End Role="Content" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="AdminContent" Association="contentManagementSystem.Store.AdminContent">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Content" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="VerifierContent" Association="contentManagementSystem.Store.VerifierContent">
+      <End Role="Verifier" EntitySet="Verifiers" />
+      <End Role="Content" EntitySet="Contents" />
+    </AssociationSet>
+    <AssociationSet Name="AdminVerifier" Association="contentManagementSystem.Store.AdminVerifier">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Verifier" EntitySet="Verifiers" />
+    </AssociationSet>
+    <AssociationSet Name="AdminUploader" Association="contentManagementSystem.Store.AdminUploader">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Uploader" EntitySet="Uploaders" />
+    </AssociationSet>
+    <AssociationSet Name="VerifierUploader" Association="contentManagementSystem.Store.VerifierUploader">
+      <End Role="Verifier" EntitySet="Verifiers" />
+      <End Role="Uploader" EntitySet="Uploaders" />
+    </AssociationSet>
+    <AssociationSet Name="AdminLogin" Association="contentManagementSystem.Store.AdminLogin">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Login" EntitySet="Logins" />
+    </AssociationSet>
+    <AssociationSet Name="UploaderLogin" Association="contentManagementSystem.Store.UploaderLogin">
+      <End Role="Uploader" EntitySet="Uploaders" />
+      <End Role="Login" EntitySet="Logins" />
+    </AssociationSet>
+    <AssociationSet Name="VerifierLogin" Association="contentManagementSystem.Store.VerifierLogin">
+      <End Role="Verifier" EntitySet="Verifiers" />
+      <End Role="Login" EntitySet="Logins" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Uploaders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone_no" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdminId" Type="int" Nullable="false" />
+    <Property Name="VerifierId" Type="int" Nullable="false" />
+    <Property Name="Login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PdfContent" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UploaderName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UploaderId" Type="int" Nullable="false" />
+    <Property Name="AdminId" Type="int" Nullable="false" />
+    <Property Name="VerifierId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Verifiers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone_no" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AdminId" Type="int" Nullable="false" />
+    <Property Name="Login_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_Type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UploaderContent">
+    <End Role="Uploader" Type="contentManagementSystem.Store.Uploaders" Multiplicity="1" />
+    <End Role="Content" Type="contentManagementSystem.Store.Contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uploader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Content">
+        <PropertyRef Name="UploaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdminContent">
+    <End Role="Admin" Type="contentManagementSystem.Store.Admins" Multiplicity="1" />
+    <End Role="Content" Type="contentManagementSystem.Store.Contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Content">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VerifierContent">
+    <End Role="Verifier" Type="contentManagementSystem.Store.Verifiers" Multiplicity="1" />
+    <End Role="Content" Type="contentManagementSystem.Store.Contents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Verifier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Content">
+        <PropertyRef Name="VerifierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdminVerifier">
+    <End Role="Admin" Type="contentManagementSystem.Store.Admins" Multiplicity="1" />
+    <End Role="Verifier" Type="contentManagementSystem.Store.Verifiers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Verifier">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdminUploader">
+    <End Role="Admin" Type="contentManagementSystem.Store.Admins" Multiplicity="1" />
+    <End Role="Uploader" Type="contentManagementSystem.Store.Uploaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Uploader">
+        <PropertyRef Name="AdminId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VerifierUploader">
+    <End Role="Verifier" Type="contentManagementSystem.Store.Verifiers" Multiplicity="1" />
+    <End Role="Uploader" Type="contentManagementSystem.Store.Uploaders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Verifier">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Uploader">
+        <PropertyRef Name="VerifierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdminLogin">
+    <End Role="Admin" Type="contentManagementSystem.Store.Admins" Multiplicity="*" />
+    <End Role="Login" Type="contentManagementSystem.Store.Logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="Login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UploaderLogin">
+    <End Role="Uploader" Type="contentManagementSystem.Store.Uploaders" Multiplicity="*" />
+    <End Role="Login" Type="contentManagementSystem.Store.Logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Uploader">
+        <PropertyRef Name="Login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VerifierLogin">
+    <End Role="Verifier" Type="contentManagementSystem.Store.Verifiers" Multiplicity="*" />
+    <End Role="Login" Type="contentManagementSystem.Store.Logins" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Login">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Verifier">
+        <PropertyRef Name="Login_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="contentManagementSystem" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="contentManagementSystemContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Uploaders" EntityType="contentManagementSystem.Uploader" />
+          <EntitySet Name="Contents" EntityType="contentManagementSystem.Content" />
+          <EntitySet Name="Admins" EntityType="contentManagementSystem.Admin" />
+          <EntitySet Name="Verifiers" EntityType="contentManagementSystem.Verifier" />
+          <EntitySet Name="Logins" EntityType="contentManagementSystem.Login" />
+          <AssociationSet Name="UploaderContent" Association="contentManagementSystem.UploaderContent">
+            <End Role="Uploader" EntitySet="Uploaders" />
+            <End Role="Content" EntitySet="Contents" />
+          </AssociationSet>
+          <AssociationSet Name="AdminContent" Association="contentManagementSystem.AdminContent">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Content" EntitySet="Contents" />
+          </AssociationSet>
+          <AssociationSet Name="VerifierContent" Association="contentManagementSystem.VerifierContent">
+            <End Role="Verifier" EntitySet="Verifiers" />
+            <End Role="Content" EntitySet="Contents" />
+          </AssociationSet>
+          <AssociationSet Name="AdminVerifier" Association="contentManagementSystem.AdminVerifier">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Verifier" EntitySet="Verifiers" />
+          </AssociationSet>
+          <AssociationSet Name="AdminUploader" Association="contentManagementSystem.AdminUploader">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Uploader" EntitySet="Uploaders" />
+          </AssociationSet>
+          <AssociationSet Name="VerifierUploader" Association="contentManagementSystem.VerifierUploader">
+            <End Role="Verifier" EntitySet="Verifiers" />
+            <End Role="Uploader" EntitySet="Uploaders" />
+          </AssociationSet>
+          <AssociationSet Name="AdminLogin" Association="contentManagementSystem.AdminLogin">
+            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Login" EntitySet="Logins" />
+          </AssociationSet>
+          <AssociationSet Name="UploaderLogin" Association="contentManagementSystem.UploaderLogin">
+            <End Role="Uploader" EntitySet="Uploaders" />
+            <End Role="Login" EntitySet="Logins" />
+          </AssociationSet>
+          <AssociationSet Name="VerifierLogin" Association="contentManagementSystem.VerifierLogin">
+            <End Role="Verifier" EntitySet="Verifiers" />
+            <End Role="Login" EntitySet="Logins" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Uploader">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="Phone_no" Type="String" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="Content" Type="String" Nullable="false" />
+          <NavigationProperty Name="Contents" Relationship="contentManagementSystem.UploaderContent" FromRole="Uploader" ToRole="Content" />
+          <NavigationProperty Name="Admin" Relationship="contentManagementSystem.AdminUploader" FromRole="Uploader" ToRole="Admin" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Verifier" Relationship="contentManagementSystem.VerifierUploader" FromRole="Uploader" ToRole="Verifier" />
+          <Property Name="VerifierId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Login" Relationship="contentManagementSystem.UploaderLogin" FromRole="Uploader" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="PdfContent" Type="String" Nullable="false" />
+          <Property Name="UploaderName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Uploader" Relationship="contentManagementSystem.UploaderContent" FromRole="Content" ToRole="Uploader" />
+          <Property Name="UploaderId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Admin" Relationship="contentManagementSystem.AdminContent" FromRole="Content" ToRole="Admin" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Verifier" Relationship="contentManagementSystem.VerifierContent" FromRole="Content" ToRole="Verifier" />
+          <Property Name="VerifierId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <NavigationProperty Name="Contents" Relationship="contentManagementSystem.AdminContent" FromRole="Admin" ToRole="Content" />
+          <NavigationProperty Name="Verifiers" Relationship="contentManagementSystem.AdminVerifier" FromRole="Admin" ToRole="Verifier" />
+          <NavigationProperty Name="Uploaders" Relationship="contentManagementSystem.AdminUploader" FromRole="Admin" ToRole="Uploader" />
+          <NavigationProperty Name="Login" Relationship="contentManagementSystem.AdminLogin" FromRole="Admin" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Verifier">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="Phone_no" Type="String" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <NavigationProperty Name="Contents" Relationship="contentManagementSystem.VerifierContent" FromRole="Verifier" ToRole="Content" />
+          <NavigationProperty Name="Admin" Relationship="contentManagementSystem.AdminVerifier" FromRole="Verifier" ToRole="Admin" />
+          <Property Name="AdminId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Uploaders" Relationship="contentManagementSystem.VerifierUploader" FromRole="Verifier" ToRole="Uploader" />
+          <NavigationProperty Name="Login" Relationship="contentManagementSystem.VerifierLogin" FromRole="Verifier" ToRole="Login" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="User_Type" Type="String" Nullable="false" />
+          <NavigationProperty Name="Admins" Relationship="contentManagementSystem.AdminLogin" FromRole="Login" ToRole="Admin" />
+          <NavigationProperty Name="Uploaders" Relationship="contentManagementSystem.UploaderLogin" FromRole="Login" ToRole="Uploader" />
+          <NavigationProperty Name="Verifiers" Relationship="contentManagementSystem.VerifierLogin" FromRole="Login" ToRole="Verifier" />
+        </EntityType>
+        <Association Name="UploaderContent">
+          <End Type="contentManagementSystem.Uploader" Role="Uploader" Multiplicity="1" />
+          <End Type="contentManagementSystem.Content" Role="Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uploader">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="UploaderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AdminContent">
+          <End Type="contentManagementSystem.Admin" Role="Admin" Multiplicity="1" />
+          <End Type="contentManagementSystem.Content" Role="Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VerifierContent">
+          <End Type="contentManagementSystem.Verifier" Role="Verifier" Multiplicity="1" />
+          <End Type="contentManagementSystem.Content" Role="Content" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verifier">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Content">
+              <PropertyRef Name="VerifierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AdminVerifier">
+          <End Type="contentManagementSystem.Admin" Role="Admin" Multiplicity="1" />
+          <End Type="contentManagementSystem.Verifier" Role="Verifier" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Verifier">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AdminUploader">
+          <End Type="contentManagementSystem.Admin" Role="Admin" Multiplicity="1" />
+          <End Type="contentManagementSystem.Uploader" Role="Uploader" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Uploader">
+              <PropertyRef Name="AdminId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="VerifierUploader">
+          <End Type="contentManagementSystem.Verifier" Role="Verifier" Multiplicity="1" />
+          <End Type="contentManagementSystem.Uploader" Role="Uploader" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verifier">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Uploader">
+              <PropertyRef Name="VerifierId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AdminLogin">
+          <End Type="contentManagementSystem.Admin" Role="Admin" Multiplicity="*" />
+          <End Type="contentManagementSystem.Login" Role="Login" Multiplicity="1" />
+        </Association>
+        <Association Name="UploaderLogin">
+          <End Type="contentManagementSystem.Uploader" Role="Uploader" Multiplicity="*" />
+          <End Type="contentManagementSystem.Login" Role="Login" Multiplicity="1" />
+        </Association>
+        <Association Name="VerifierLogin">
+          <End Type="contentManagementSystem.Verifier" Role="Verifier" Multiplicity="*" />
+          <End Type="contentManagementSystem.Login" Role="Login" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="contentManagementSystemStoreContainer" CdmEntityContainer="contentManagementSystemContainer">
+    <EntitySetMapping Name="Uploaders">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Uploader)">
+        <MappingFragment StoreEntitySet="Uploaders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="VerifierId" ColumnName="VerifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Content)">
+        <MappingFragment StoreEntitySet="Contents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PdfContent" ColumnName="PdfContent" />
+          <ScalarProperty Name="UploaderName" ColumnName="UploaderName" />
+          <ScalarProperty Name="UploaderId" ColumnName="UploaderId" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+          <ScalarProperty Name="VerifierId" ColumnName="VerifierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Admin)">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Verifiers">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Verifier)">
+        <MappingFragment StoreEntitySet="Verifiers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Login)">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AdminLogin" TypeName="contentManagementSystem.AdminLogin" StoreEntitySet="Admins">
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Login_Id" />
+      </EndProperty>
+      <EndProperty Name="Admin">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UploaderLogin" TypeName="contentManagementSystem.UploaderLogin" StoreEntitySet="Uploaders">
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Login_Id" />
+      </EndProperty>
+      <EndProperty Name="Uploader">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VerifierLogin" TypeName="contentManagementSystem.VerifierLogin" StoreEntitySet="Verifiers">
+      <EndProperty Name="Login">
+        <ScalarProperty Name="Id" ColumnName="Login_Id" />
+      </EndProperty>
+      <EndProperty Name="Verifier">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

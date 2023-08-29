@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using RestSharp;
 namespace ContentManagement.UserControls
 {
     public partial class uploaderUploadContentPage : UserControl
@@ -42,6 +43,18 @@ namespace ContentManagement.UserControls
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedFilePath = openFileDialog.FileName;
+                    filepathlabel.Text = selectedFilePath; // Display the selected file path
+                }
+            }
         }
     }
 }

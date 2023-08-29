@@ -17,6 +17,8 @@ namespace ContentManagement.UserControls
             InitializeComponent();
         }
 
+        public Action<object, EventArgs> AddUserControlRequested { get; internal set; }
+
         private void button1_Click(object sender, EventArgs e)
         {
 

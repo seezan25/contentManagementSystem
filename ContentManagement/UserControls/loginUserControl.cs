@@ -12,11 +12,21 @@ namespace ContentManagement.UserControls
 {
     public partial class loginUserControl : UserControl
     {
+        public Form1 form1;
+        public uploaderContentPage uploaderContent;
         public loginUserControl()
         {
             InitializeComponent();
         }
-
+        public void addUserControl(UserControl userControl)
+        {
+            form1 = new Form1();
+            form1.Dock = DockStyle.Fill;
+            form1.panel2.Controls.Clear();
+            form1.panel2.Controls.Add(userControl);
+            form1.panel2.BringToFront();
+        }
+        
         private void login_Load(object sender, EventArgs e)
         {
 
@@ -49,6 +59,13 @@ namespace ContentManagement.UserControls
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            uploaderContent = new uploaderContentPage();
+            addUserControl(uploaderContent);
         }
     }
 }
