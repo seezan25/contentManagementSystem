@@ -5,20 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="70199aa556ca41668c9ef130c60ca74c" Name="Diagram1" >
-        <EntityTypeShape EntityType="contentManagementSystem.Uploader" Width="1.5" PointX="7.5" PointY="2.5" />
-        <EntityTypeShape EntityType="contentManagementSystem.Content" Width="1.5" PointX="4" PointY="0.75" />
-        <EntityTypeShape EntityType="contentManagementSystem.Admin" Width="1.5" PointX="4" PointY="4.625" />
-        <EntityTypeShape EntityType="contentManagementSystem.Verifier" Width="1.5" PointX="0.5" PointY="3.5" />
-        <EntityTypeShape EntityType="contentManagementSystem.Login" Width="1.5" PointX="4.375" PointY="7.625" />
-        <AssociationConnector Association="contentManagementSystem.UploaderContent" />
-        <AssociationConnector Association="contentManagementSystem.AdminContent" />
-        <AssociationConnector Association="contentManagementSystem.VerifierContent" />
-        <AssociationConnector Association="contentManagementSystem.AdminVerifier" />
-        <AssociationConnector Association="contentManagementSystem.AdminUploader" />
-        <AssociationConnector Association="contentManagementSystem.VerifierUploader" />
-        <AssociationConnector Association="contentManagementSystem.AdminLogin" />
-        <AssociationConnector Association="contentManagementSystem.UploaderLogin" />
-        <AssociationConnector Association="contentManagementSystem.VerifierLogin" />
+        <EntityTypeShape EntityType="contentManagementSystem.Uploader" Width="1.5" PointX="7.75" PointY="2.625" />
+        <EntityTypeShape EntityType="contentManagementSystem.Content" Width="1.5" PointX="3" PointY="2.625" />
+        <EntityTypeShape EntityType="contentManagementSystem.Admin" Width="1.5" PointX="5.375" PointY="2.625" />
+        <EntityTypeShape EntityType="contentManagementSystem.Verifier" Width="1.5" PointX="0.625" PointY="2.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
