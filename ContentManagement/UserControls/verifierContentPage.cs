@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ContentManagement.UserControls
 {
-    public partial class viewerContentPage : UserControl
+    public partial class verifierContentPage : UserControl
     {
-        public viewerContentPage()
+        public verifierContentPage()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

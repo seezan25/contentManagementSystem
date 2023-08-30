@@ -1,6 +1,6 @@
 ﻿namespace ContentManagement.UserControls
 {
-    partial class viewerContentPage
+    partial class verifierContentPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(415, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 536);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 4;
             // 
             // sn
             // 
@@ -77,13 +77,13 @@
             this.verifiedBy.HeaderText = "Verified By";
             this.verifiedBy.Name = "verifiedBy";
             // 
-            // viewerContentPage
+            // verifierContentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(187)))));
             this.Controls.Add(this.dataGridView1);
-            this.Name = "viewerContentPage";
+            this.Name = "verifierContentPage";
             this.Size = new System.Drawing.Size(1370, 678);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

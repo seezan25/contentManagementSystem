@@ -5,7 +5,6 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.Form1.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.Properties.Resources.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminContentPage.resources
-D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminUpdateContentPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminHomePage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminNotificationPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminViewNotificationPage.resources
@@ -17,7 +16,6 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierNotificationPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierUploaderPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierViewNotificationPage.resources
-D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.viewerContentPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.csproj.GenerateResource.cache
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.csproj.CoreCompileInputs.cache
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.exe
@@ -63,3 +61,6 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\EntityFram
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\EntityFramework.xml
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\bin\Debug\EntityFramework.SqlServer.xml
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierContentPage.resources

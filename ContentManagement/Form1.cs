@@ -13,7 +13,9 @@ namespace ContentManagement
 {
     public partial class Form1 : Form
     {
-        private adminPage adminpage; 
+        private adminPage adminpage;
+        private uploaderPage uploaderpage;
+        private verifierPage verifierpage;
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock= DockStyle.Fill;
@@ -76,8 +78,8 @@ namespace ContentManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
-         adminpage = new adminPage();
-            addUserControl(adminpage);
+         verifierpage = new verifierPage();
+            addUserControl(verifierpage);
         }
     }
 }

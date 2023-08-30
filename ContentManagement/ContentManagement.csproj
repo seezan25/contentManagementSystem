@@ -143,12 +143,6 @@
     <Compile Include="UserControls\adminPage.Designer.cs">
       <DependentUpon>adminPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\adminUpdateContentPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\adminUpdateContentPage.Designer.cs">
-      <DependentUpon>adminUpdateContentPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\adminHomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,17 +239,29 @@
     <Compile Include="UserControls\uploaderNotificationPage.Designer.cs">
       <DependentUpon>uploaderNotificationPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\uploaderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uploaderPage.Designer.cs">
+      <DependentUpon>uploaderPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uploaderUploadContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\uploaderUploadContentPage.Designer.cs">
       <DependentUpon>uploaderUploadContentPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uploaderUploadPage.cs">
+    <Compile Include="UserControls\uploaderUpdateContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uploaderUploadPage.Designer.cs">
-      <DependentUpon>uploaderUploadPage.cs</DependentUpon>
+    <Compile Include="UserControls\uploaderUpdateContentPage.Designer.cs">
+      <DependentUpon>uploaderUpdateContentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\verifierContentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\verifierContentPage.Designer.cs">
+      <DependentUpon>verifierContentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\verifierHomePage.cs">
       <SubType>UserControl</SubType>
@@ -275,6 +281,12 @@
     <Compile Include="UserControls\verifierEditProfilePage.Designer.cs">
       <DependentUpon>verifierEditProfilePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\verifierPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\verifierPage.Designer.cs">
+      <DependentUpon>verifierPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\verifierUploaderPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -286,12 +298,6 @@
     </Compile>
     <Compile Include="UserControls\verifierViewNotificationPage.Designer.cs">
       <DependentUpon>verifierViewNotificationPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\verifierContentPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\verifierContentPage.Designer.cs">
-      <DependentUpon>verifierContentPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -313,9 +319,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\adminPage.resx">
       <DependentUpon>adminPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\adminUpdateContentPage.resx">
-      <DependentUpon>adminUpdateContentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\adminHomePage.resx">
       <DependentUpon>adminHomePage.cs</DependentUpon>
@@ -365,11 +368,17 @@
     <EmbeddedResource Include="UserControls\uploaderNotificationPage.resx">
       <DependentUpon>uploaderNotificationPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uploaderPage.resx">
+      <DependentUpon>uploaderPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uploaderUploadContentPage.resx">
       <DependentUpon>uploaderUploadContentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uploaderUploadPage.resx">
-      <DependentUpon>uploaderUploadPage.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\uploaderUpdateContentPage.resx">
+      <DependentUpon>uploaderUpdateContentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\verifierContentPage.resx">
+      <DependentUpon>verifierContentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\verifierHomePage.resx">
       <DependentUpon>verifierHomePage.cs</DependentUpon>
@@ -380,14 +389,14 @@
     <EmbeddedResource Include="UserControls\verifierEditProfilePage.resx">
       <DependentUpon>verifierEditProfilePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\verifierPage.resx">
+      <DependentUpon>verifierPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\verifierUploaderPage.resx">
       <DependentUpon>verifierUploaderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\verifierViewNotificationPage.resx">
       <DependentUpon>verifierViewNotificationPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\verifierContentPage.resx">
-      <DependentUpon>verifierContentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Models\contentManagementSystem.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

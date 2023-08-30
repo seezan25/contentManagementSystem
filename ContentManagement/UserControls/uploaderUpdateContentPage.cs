@@ -38,8 +38,8 @@ namespace ContentManagement.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            uploaderUploadContent = new uploaderUploadContentPage();
-            addUserControl(uploaderUploadContent);
+            uploaderEditContent = new uploaderEditContentPage();
+            addUserControl(uploaderEditContent);
         }
 
         private void uploaderUploadPage_Load(object sender, EventArgs e)

@@ -52,13 +52,23 @@ namespace ContentManagement.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            verifierEditProfile = new verifierEditProfilePage();
-            addUserControl(verifierEditProfile);
+            
         }
 
         private void panel4_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            verifierEditProfile = new verifierEditProfilePage();
+            addUserControl(verifierEditProfile);
         }
     }
 }
