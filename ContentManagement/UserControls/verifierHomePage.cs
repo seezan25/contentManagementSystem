@@ -55,5 +55,10 @@ namespace ContentManagement.UserControls
             verifierEditProfile = new verifierEditProfilePage();
             addUserControl(verifierEditProfile);
         }
+
+        private void panel4_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

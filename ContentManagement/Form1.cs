@@ -13,10 +13,7 @@ namespace ContentManagement
 {
     public partial class Form1 : Form
     {
-        private nonRegisteredUserPage nonRegisteredUser;
-        private loginUserControl login;
-        private signupUserControl signUp;
-
+        private adminPage adminpage; 
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock= DockStyle.Fill;
@@ -27,21 +24,17 @@ namespace ContentManagement
         public Form1()
         {
             InitializeComponent();
-            nonRegisteredUser = new nonRegisteredUserPage();
-            addUserControl(nonRegisteredUser);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
-            nonRegisteredUser = new nonRegisteredUserPage();
-            addUserControl(nonRegisteredUser);
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            login = new loginUserControl();
-            addUserControl(login);
+          
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -53,8 +46,7 @@ namespace ContentManagement
 
         private void label3_Click(object sender, EventArgs e)
         {
-            signUp = new signupUserControl();
-            addUserControl(signUp);
+          
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -75,6 +67,17 @@ namespace ContentManagement
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+         adminpage = new adminPage();
+            addUserControl(adminpage);
         }
     }
 }
