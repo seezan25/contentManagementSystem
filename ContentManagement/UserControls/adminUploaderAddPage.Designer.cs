@@ -52,7 +52,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 57;
-            this.button1.Text = "Edit";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox6

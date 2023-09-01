@@ -55,9 +55,9 @@
             this.email,
             this.username,
             this.password});
-            this.dataGridView1.Location = new System.Drawing.Point(285, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(292, 51);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(741, 482);
+            this.dataGridView1.Size = new System.Drawing.Size(741, 536);
             this.dataGridView1.TabIndex = 0;
             // 
             // SN
@@ -100,7 +100,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(57, 117);
+            this.button1.Location = new System.Drawing.Point(53, 156);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 1;
@@ -113,7 +113,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(57, 254);
+            this.button2.Location = new System.Drawing.Point(53, 293);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 48);
             this.button2.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(57, 379);
+            this.button3.Location = new System.Drawing.Point(53, 418);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 48);
             this.button3.TabIndex = 3;
@@ -135,7 +135,7 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(1049, 79);
+            this.panel1.Location = new System.Drawing.Point(1048, 104);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 392);
             this.panel1.TabIndex = 4;

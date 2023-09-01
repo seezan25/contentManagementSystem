@@ -57,5 +57,15 @@ namespace ContentManagement.UserControls
             uploaderNotification = new uploaderNotificationPage();  
             addUserControl(uploaderNotification);   
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
     }
 }

@@ -38,11 +38,13 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(87, 242);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 48);
             this.button4.TabIndex = 14;
-            this.button4.Text = "Upload";
+            this.button4.Text = "Edit";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // textBox2

@@ -47,7 +47,7 @@
             this.content,
             this.uploadedBy,
             this.verifiedBy});
-            this.dataGridView1.Location = new System.Drawing.Point(415, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(415, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 536);
             this.dataGridView1.TabIndex = 4;
