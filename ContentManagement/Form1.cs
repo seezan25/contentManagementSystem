@@ -78,8 +78,8 @@ namespace ContentManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
-         verifierpage = new verifierPage();
-            addUserControl(verifierpage);
+         adminpage = new adminPage();
+            addUserControl(adminpage);
         }
     }
 }
