@@ -102,6 +102,10 @@
             "Uploader"});
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Admin",
+            "Uploader",
+            "Verifier"});
             this.comboBox3.Location = new System.Drawing.Point(215, 175);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(210, 21);
