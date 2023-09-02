@@ -89,6 +89,7 @@ namespace ContentManagement.UserControls
 {
     public partial class adminUploadContentPage : UserControl
     {
+        private string selectedFilePath;
         // Database connection string
         private string strConnString = "Data Source=DESKTOP-4MDUH5M;Initial Catalog=contentManagementSystem;Integrated Security=True";
 
@@ -114,7 +115,7 @@ namespace ContentManagement.UserControls
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Get the selected file path and display it in a TextBox
-                string selectedFilePath = openFileDialog.FileName;
+                selectedFilePath = openFileDialog.FileName; // Assign the value to the class-level variable
                 textBox3.Text = selectedFilePath;
             }
         }
@@ -126,22 +127,29 @@ namespace ContentManagement.UserControls
                 try
                 {
                     // Read the selected file into a byte array
-                    byte[] fileData = File.ReadAllBytes(textBox3.Text);
+                    byte[] fileData = File.ReadAllBytes(selectedFilePath); // Use the class-level variable
                     string fileName = textBox1.Text.Trim();
+                    int uploaderId = GetUploaderId(); // Replace with the actual uploader ID
+                    DateTime uploadDate = DateTime.Now;
+                    int status = 0; // Set initial status as needed
 
                     using (SqlConnection connection = new SqlConnection(strConnString))
                     {
                         connection.Open();
 
                         // SQL query to insert the file data into the database
-                        string insertQuery = "INSERT INTO Contents (Name, PdfContent, UploaderName) VALUES (@ContentName, @PdfContent, @ContentUploaderName)";
+                        string insertQuery = "INSERT INTO Contents (Name, Path, VerifierId, UploaderId, Date, Status) " +
+                                             "VALUES (@ContentName, @ContentPath, @VerifierId, @UploaderId, @UploadDate, @Status)";
 
                         using (SqlCommand command = new SqlCommand(insertQuery, connection))
                         {
                             // Set parameters for the query
                             command.Parameters.AddWithValue("@ContentName", fileName);
-                            command.Parameters.AddWithValue("@PdfContent", fileData);
-                            command.Parameters.AddWithValue("@ContentUploaderName", "YourUploaderNameHere"); // Replace with the actual uploader's name
+                            command.Parameters.AddWithValue("@ContentPath", selectedFilePath);
+                            command.Parameters.AddWithValue("@VerifierId", DBNull.Value); // Initially, no verifier
+                            command.Parameters.AddWithValue("@UploaderId", uploaderId);
+                            command.Parameters.AddWithValue("@UploadDate", uploadDate);
+                            command.Parameters.AddWithValue("@Status", status);
 
                             // Execute the query
                             command.ExecuteNonQuery();
@@ -161,11 +169,19 @@ namespace ContentManagement.UserControls
             }
         }
 
+        private int GetUploaderId()
+        {
+            // Replace this with your logic to get the uploader ID
+            // For example, you might have a login system that assigns an ID to the uploader.
+            return 1; // Dummy value; replace it with the actual ID.
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
     }
 }
+
 
 
