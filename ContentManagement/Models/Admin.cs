@@ -14,24 +14,8 @@ namespace ContentManagement.Models
     
     public partial class Admin
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Admin()
-        {
-            this.Contents = new HashSet<Content>();
-            this.Verifiers = new HashSet<Verifier>();
-            this.Uploaders = new HashSet<Uploader>();
-        }
-    
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Content> Contents { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Verifier> Verifiers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Uploader> Uploaders { get; set; }
-        public virtual Login Login { get; set; }
     }
 }

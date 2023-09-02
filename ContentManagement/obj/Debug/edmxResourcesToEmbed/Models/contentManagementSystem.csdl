@@ -1,38 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="contentManagementSystem" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-  <EntityContainer Name="contentManagementSystemContainer" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Uploaders" EntityType="contentManagementSystem.Uploader" />
-    <EntitySet Name="Contents" EntityType="contentManagementSystem.Content" />
+  <EntityContainer Name="contentManagementSystemContainer1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Admins" EntityType="contentManagementSystem.Admin" />
+    <EntitySet Name="Uploaders" EntityType="contentManagementSystem.Uploader" />
     <EntitySet Name="Verifiers" EntityType="contentManagementSystem.Verifier" />
+    <EntitySet Name="Contents" EntityType="contentManagementSystem.Content" />
   </EntityContainer>
-  <EntityType Name="Uploader">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Username" Type="String" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="Password" Type="String" Nullable="false" />
-    <Property Name="Phone_no" Type="String" Nullable="false" />
-    <Property Name="Address" Type="String" Nullable="false" />
-    <Property Name="Email" Type="String" Nullable="false" />
-    <Property Name="Content" Type="String" Nullable="false" />
-    <Property Name="AdminId" Type="Int32" Nullable="false" />
-    <Property Name="VerifierId" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Content">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="PdfContent" Type="String" Nullable="false" />
-    <Property Name="UploaderName" Type="String" Nullable="false" />
-    <Property Name="UploaderId" Type="Int32" Nullable="false" />
-    <Property Name="AdminId" Type="Int32" Nullable="false" />
-    <Property Name="VerifierId" Type="Int32" Nullable="false" />
-  </EntityType>
   <EntityType Name="Admin">
     <Key>
       <PropertyRef Name="Id" />
@@ -41,17 +14,40 @@
     <Property Name="Username" Type="String" Nullable="false" />
     <Property Name="Password" Type="String" Nullable="false" />
   </EntityType>
+  <EntityType Name="Uploader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Phone_no" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+  </EntityType>
   <EntityType Name="Verifier">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Username" Type="String" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="Phone_no" Type="String" Nullable="false" />
     <Property Name="Address" Type="String" Nullable="false" />
     <Property Name="Email" Type="String" Nullable="false" />
-    <Property Name="AdminId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <Property Name="VerifierId" Type="Int32" Nullable="true" />
+    <Property Name="UploaderId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
   </EntityType>
 </Schema>

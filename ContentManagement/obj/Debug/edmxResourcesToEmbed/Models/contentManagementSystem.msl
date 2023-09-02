@@ -1,35 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="contentManagementSystemStoreContainer" CdmEntityContainer="contentManagementSystemContainer">
-    <EntitySetMapping Name="Uploaders">
-      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Uploader)">
-        <MappingFragment StoreEntitySet="Uploaders">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Content" ColumnName="Content" />
-          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
-          <ScalarProperty Name="VerifierId" ColumnName="VerifierId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Contents">
-      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Content)">
-        <MappingFragment StoreEntitySet="Contents">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="PdfContent" ColumnName="PdfContent" />
-          <ScalarProperty Name="UploaderName" ColumnName="UploaderName" />
-          <ScalarProperty Name="UploaderId" ColumnName="UploaderId" />
-          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
-          <ScalarProperty Name="VerifierId" ColumnName="VerifierId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="contentManagementSystemStoreContainer" CdmEntityContainer="contentManagementSystemContainer1">
     <EntitySetMapping Name="Admins">
       <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Admin)">
         <MappingFragment StoreEntitySet="Admins">
@@ -39,17 +10,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Uploaders">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Uploader)">
+        <MappingFragment StoreEntitySet="Uploaders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Verifiers">
       <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Verifier)">
         <MappingFragment StoreEntitySet="Verifiers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Phone_no" ColumnName="Phone_no" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="IsTypeOf(contentManagementSystem.Content)">
+        <MappingFragment StoreEntitySet="Contents">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="VerifierId" ColumnName="VerifierId" />
+          <ScalarProperty Name="UploaderId" ColumnName="UploaderId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

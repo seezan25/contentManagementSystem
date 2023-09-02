@@ -115,9 +115,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>contentManagementSystem.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Login.cs">
-      <DependentUpon>contentManagementSystem.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Uploader.cs">
       <DependentUpon>contentManagementSystem.tt</DependentUpon>
     </Compile>
@@ -421,6 +418,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Models\contentManagementSystem.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>contentManagementSystem.Context.cs</LastGenOutput>
@@ -433,9 +433,5 @@
       <DependentUpon>contentManagementSystem.edmx</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

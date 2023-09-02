@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="70199aa556ca41668c9ef130c60ca74c" Name="Diagram1" >
-        <EntityTypeShape EntityType="contentManagementSystem.Uploader" Width="1.5" PointX="7.75" PointY="2.625" />
-        <EntityTypeShape EntityType="contentManagementSystem.Content" Width="1.5" PointX="3" PointY="2.625" />
-        <EntityTypeShape EntityType="contentManagementSystem.Admin" Width="1.5" PointX="5.375" PointY="2.625" />
-        <EntityTypeShape EntityType="contentManagementSystem.Verifier" Width="1.5" PointX="0.625" PointY="2.625" />
+      <Diagram DiagramId="613694c355084accaebaa5895599daa0" Name="Diagram1" >
+        <EntityTypeShape EntityType="contentManagementSystem.Admin" Width="1.5" PointX="1.75" PointY="1.75" />
+        <EntityTypeShape EntityType="contentManagementSystem.Uploader" Width="1.5" PointX="3.875" PointY="1.75" />
+        <EntityTypeShape EntityType="contentManagementSystem.Verifier" Width="1.5" PointX="6" PointY="1.75" />
+        <EntityTypeShape EntityType="contentManagementSystem.Content" Width="1.5" PointX="8.125" PointY="1.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

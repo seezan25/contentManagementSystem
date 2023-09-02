@@ -14,27 +14,12 @@ namespace ContentManagement.Models
     
     public partial class Uploader
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Uploader()
-        {
-            this.Contents = new HashSet<Content>();
-        }
-    
         public int Id { get; set; }
         public string Username { get; set; }
-        public string Name { get; set; }
         public string Password { get; set; }
+        public string Name { get; set; }
         public string Phone_no { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
-        public string Content { get; set; }
-        public int AdminId { get; set; }
-        public int VerifierId { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Content> Contents { get; set; }
-        public virtual Admin Admin { get; set; }
-        public virtual Verifier Verifier { get; set; }
-        public virtual Login Login { get; set; }
     }
 }

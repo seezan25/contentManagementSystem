@@ -16,14 +16,10 @@ namespace ContentManagement.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string PdfContent { get; set; }
-        public string UploaderName { get; set; }
+        public string Path { get; set; }
+        public Nullable<int> VerifierId { get; set; }
         public int UploaderId { get; set; }
-        public int AdminId { get; set; }
-        public int VerifierId { get; set; }
-    
-        public virtual Uploader Uploader { get; set; }
-        public virtual Admin Admin { get; set; }
-        public virtual Verifier Verifier { get; set; }
+        public System.DateTime Date { get; set; }
+        public bool Status { get; set; }
     }
 }
