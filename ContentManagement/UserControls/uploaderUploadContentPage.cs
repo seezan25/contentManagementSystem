@@ -15,6 +15,7 @@ namespace ContentManagement.UserControls
     {
         private uploaderUploadContentPage uploaderUploadContent;
         private uploaderEditContentPage uploaderEditContent;
+        private string selectedFilePath;
         public uploaderUploadContentPage()
         {
             InitializeComponent();
@@ -47,13 +48,22 @@ namespace ContentManagement.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Set filters for the file types you want to allow (e.g., PDF files)
+            openFileDialog.Filter = "PDF Files|*.pdf|All Files|*.*";
+
+            // Show the file dialog to the user
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string selectedFilePath = openFileDialog.FileName;
-                    filepathlabel.Text = selectedFilePath; // Display the selected file path
-                }
+                // Get the selected file path and display it in a TextBox
+                selectedFilePath = openFileDialog.FileName; // Assign the value to the class-level variable
+                textBox3.Text = selectedFilePath;
             }
         }
     }

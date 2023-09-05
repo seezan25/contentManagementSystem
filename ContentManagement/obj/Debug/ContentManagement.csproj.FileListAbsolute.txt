@@ -64,3 +64,5 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierContentPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\Interop.Acrobat.dll
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.csproj.ResolveComReference.cache
