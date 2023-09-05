@@ -1,6 +1,6 @@
 ﻿namespace ContentManagement.UserControls
 {
-    partial class verifierUploaderPage
+    partial class VerifierVerifierPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,19 +36,19 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(368, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(274, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(634, 539);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(741, 536);
+            this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // verifierUploaderPage
+            // VerifierVerifierPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(187)))));
             this.Controls.Add(this.dataGridView1);
-            this.Name = "verifierUploaderPage";
+            this.Name = "VerifierVerifierPage";
             this.Size = new System.Drawing.Size(1370, 678);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -56,7 +56,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ContentManagement.UserControls
 {
-    public partial class verifierUploaderPage : UserControl
+    public partial class UploaderUploaderPage : UserControl
     {
-        public verifierUploaderPage()
+        public UploaderUploaderPage()
         {
             InitializeComponent();
             try
@@ -41,6 +41,12 @@ namespace ContentManagement.UserControls
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+        }
+
+        private void UploaderUploaderPage_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

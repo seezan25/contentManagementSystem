@@ -32,6 +32,7 @@ namespace ContentManagement
         public Form1()
         {
             InitializeComponent();
+            comboBox3.Text = "Admin";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -217,6 +218,13 @@ namespace ContentManagement
                     }
                 }
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = "";
+            textBox4.Text = "";
+            comboBox3.Text = "Admin";
         }
     }
 }

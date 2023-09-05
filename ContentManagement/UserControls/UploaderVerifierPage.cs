@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ContentManagement.UserControls
 {
-    public partial class verifierUploaderPage : UserControl
+    public partial class UploaderVerifierPage : UserControl
     {
-        public verifierUploaderPage()
+        public UploaderVerifierPage()
         {
             InitializeComponent();
             try
@@ -24,7 +24,7 @@ namespace ContentManagement.UserControls
                     connection.Open();
 
                     // Define your SQL query to retrieve limited columns from the "uploaders" table
-                    string selectQuery = "SELECT Username, Password,Name,Address,Phone_no FROM uploaders";
+                    string selectQuery = "SELECT Username, Password,Name,Address,Phone_no FROM Verifiers";
 
                     using (SqlCommand command = new SqlCommand(selectQuery, connection))
                     {
