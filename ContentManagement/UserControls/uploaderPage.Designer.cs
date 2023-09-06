@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uploaderPage));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -44,7 +46,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(169)))), ((int)(((byte)(173)))));
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
@@ -54,6 +58,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1370, 69);
             this.panel3.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Location = new System.Drawing.Point(841, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Verifier";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label13
             // 
@@ -66,11 +81,22 @@
             this.label13.Text = "Logout";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label1.Location = new System.Drawing.Point(716, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Uploader";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label14.Location = new System.Drawing.Point(1131, 22);
+            this.label14.Location = new System.Drawing.Point(1132, 22);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 25);
             this.label14.TabIndex = 17;
@@ -81,7 +107,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label15.Location = new System.Drawing.Point(948, 22);
+            this.label15.Location = new System.Drawing.Point(951, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(149, 25);
             this.label15.TabIndex = 16;
@@ -92,7 +118,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label16.Location = new System.Drawing.Point(831, 22);
+            this.label16.Location = new System.Drawing.Point(596, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(81, 25);
             this.label16.TabIndex = 19;
@@ -103,7 +129,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label17.Location = new System.Drawing.Point(733, 22);
+            this.label17.Location = new System.Drawing.Point(497, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 25);
             this.label17.TabIndex = 15;
@@ -153,5 +179,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

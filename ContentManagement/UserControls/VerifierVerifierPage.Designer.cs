@@ -38,7 +38,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(274, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(741, 536);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 536);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -50,6 +50,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "VerifierVerifierPage";
             this.Size = new System.Drawing.Size(1370, 678);
+            this.Load += new System.EventHandler(this.VerifierVerifierPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

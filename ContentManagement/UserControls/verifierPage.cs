@@ -16,6 +16,7 @@ namespace ContentManagement.UserControls
         private verifierNotificationPage verifierNotification;
         private verifierUploaderPage verifierUploader;
         private verifierContentPage verifiercontent;
+        private VerifierVerifierPage verifierVerifier;
         public verifierPage()
         {
             InitializeComponent();
@@ -68,6 +69,12 @@ namespace ContentManagement.UserControls
                 Application.Restart();
             }
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            verifierVerifier = new VerifierVerifierPage();
+            addUserControl(verifierVerifier);
         }
     }
 }

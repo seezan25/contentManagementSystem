@@ -47,5 +47,10 @@ namespace ContentManagement.UserControls
         {
 
         }
+
+        private void VerifierVerifierPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
