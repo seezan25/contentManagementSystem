@@ -26,7 +26,7 @@ namespace ContentManagement.UserControls
                     connection.Open();
 
                     // Define your SQL query to retrieve limited columns from the "uploaders" table
-                    string selectQuery = "SELECT Username, Password,Name,Address,Phone_no FROM Verifiers";
+                    string selectQuery = "SELECT Id,Username, Password,Name,Address,Phone_no FROM Verifiers";
 
                     using (SqlCommand command = new SqlCommand(selectQuery, connection))
                     {
@@ -66,7 +66,30 @@ namespace ContentManagement.UserControls
         private void button2_Click(object sender, EventArgs e)
         {
             adminVerifierEdit = new adminVerifierEditPage();
-            addUserControl(adminVerifierEdit);
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the selected row index
+                int rowIndex = dataGridView1.SelectedRows[0].Index;
+
+                // Access the cell values in the selected row and store them in separate variables
+                string id = dataGridView1.Rows[rowIndex].Cells["Id"].Value.ToString();
+                string name = dataGridView1.Rows[rowIndex].Cells["Name"].Value.ToString();
+                string phoneNo = dataGridView1.Rows[rowIndex].Cells["Phone_no"].Value.ToString();
+                string address = dataGridView1.Rows[rowIndex].Cells["Address"].Value.ToString();
+                string username = dataGridView1.Rows[rowIndex].Cells["Username"].Value.ToString();
+                string password = dataGridView1.Rows[rowIndex].Cells["Password"].Value.ToString();
+                // Add more columns as needed
+
+                // Now, you can use the column1Value, column2Value, etc., variables as needed
+                adminVerifierEdit.label7.Text = id;
+                adminVerifierEdit.textBox1.Text = name;
+                adminVerifierEdit.textBox2.Text = phoneNo;
+                adminVerifierEdit.textBox3.Text = address;
+                adminVerifierEdit.textBox5.Text = username;
+                adminVerifierEdit.textBox6.Text = password;
+
+                addUserControl(adminVerifierEdit);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

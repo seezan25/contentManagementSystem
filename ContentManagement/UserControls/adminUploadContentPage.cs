@@ -138,19 +138,17 @@ namespace ContentManagement.UserControls
                         connection.Open();
 
                         // SQL query to insert the file data into the database
-                        string insertQuery = "INSERT INTO Contents (Name, Path, VerifierId, UploaderId, Date, Status) " +
-                                             "VALUES (@ContentName, @ContentPath, @VerifierId, @UploaderId, @UploadDate, @Status)";
+                        string insertQuery = "INSERT INTO Contents (Name, Path, Date, Status,Files) " +
+                                             "VALUES (@ContentName, @ContentPath, @UploadDate, @Status,@Files)";
 
                         using (SqlCommand command = new SqlCommand(insertQuery, connection))
                         {
                             // Set parameters for the query
                             command.Parameters.AddWithValue("@ContentName", fileName);
                             command.Parameters.AddWithValue("@ContentPath", selectedFilePath);
-                            command.Parameters.AddWithValue("@VerifierId", DBNull.Value); // Initially, no verifier
-                            command.Parameters.AddWithValue("@UploaderId", uploaderId);
                             command.Parameters.AddWithValue("@UploadDate", uploadDate);
                             command.Parameters.AddWithValue("@Status", status);
-
+                            command.Parameters.AddWithValue("@Files", fileData);
                             // Execute the query
                             command.ExecuteNonQuery();
                         }
