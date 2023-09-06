@@ -55,5 +55,10 @@ namespace ContentManagement.UserControls
             uploaderEditProfile = new uploaderEditProfilePage();
             addUserControl(uploaderEditProfile);
         }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
