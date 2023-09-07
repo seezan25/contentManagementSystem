@@ -37,6 +37,7 @@ namespace ContentManagement.UserControls
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,12 +56,13 @@ namespace ContentManagement.UserControls
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(130, 474);
+            this.button3.Location = new System.Drawing.Point(130, 458);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 48);
             this.button3.TabIndex = 5;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -84,7 +86,7 @@ namespace ContentManagement.UserControls
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Upload";
+            this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -105,15 +107,29 @@ namespace ContentManagement.UserControls
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 48);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Download";
+            this.button4.Text = "Read";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(130, 539);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(133, 48);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Verify";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // adminContentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(240)))), ((int)(((byte)(187)))));
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -138,5 +154,6 @@ namespace ContentManagement.UserControls
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private Button button4;
+        private Button button5;
     }
 }

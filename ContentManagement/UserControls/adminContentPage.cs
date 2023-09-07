@@ -74,21 +74,19 @@ namespace ContentManagement.UserControls
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                 // Assuming you have columns named "FilePath" and "FileData" in your DataGridView
+                string id = selectedRow.Cells["Id"].Value.ToString();
                 string fileName = selectedRow.Cells["Name"].Value.ToString();
-                string filePath = selectedRow.Cells["Path"].Value.ToString();
-                byte[] fileData = (byte[])selectedRow.Cells["Files"].Value;
+                string fileDescription = selectedRow.Cells["Description"].Value.ToString();
 
                 // Display the file path in the txtFilePath TextBox
+                adminEditContent.label4.Text = id;
                 adminEditContent.textBox1.Text = fileName;
-                adminEditContent.textBox3.Text = filePath;
-
-                // Assuming you want to display the file data as a string (you may need to decode it appropriately)
-                string fileDataAsString = Encoding.UTF8.GetString(fileData); // Change the encoding if needed
-                //txtFileData.Text = fileDataAsString;
+                adminEditContent.textBox3.Text = fileDescription;
             }
             else
             {
                 // Clear the TextBoxes if no row is selected
+                adminEditContent.label4.Text = string.Empty;
                 adminEditContent.textBox1.Text = string.Empty;
                 adminEditContent.textBox3.Text = string.Empty;
             }
@@ -115,6 +113,88 @@ namespace ContentManagement.UserControls
                     // Save the file to the selected location
                     File.WriteAllBytes(saveFileDialog.FileName, fileData);
                 }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Assuming your DataGridView has a column named "ID" as a unique identifier
+                int selectedId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                // Execute DELETE SQL query
+                using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+                {
+                    connection.Open();
+                    string deleteQuery = "DELETE FROM Contents WHERE ID = @ID";
+
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", selectedId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Delete successful.");
+                            // Refresh the DataGridView
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows were deleted.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Assuming your DataGridView has a boolean column named "Status"
+                bool currentStatus = Convert.ToBoolean(dataGridView1.SelectedRows[0].Cells["Status"].Value);
+
+                // Toggle the boolean value
+                bool newStatus = !currentStatus;
+
+                // Get the ID of the selected row
+                int selectedId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Id"].Value);
+
+                // Execute an UPDATE SQL query to update the status
+                using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+                {
+                    connection.Open();
+                    string updateQuery = "UPDATE Contents SET Status = @NewStatus WHERE Id = @ID";
+
+                    using (SqlCommand command = new SqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@NewStatus", newStatus);
+                        command.Parameters.AddWithValue("@ID", selectedId);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            // Update the DataGridView to reflect the change
+                            dataGridView1.SelectedRows[0].Cells["Status"].Value = newStatus;
+                            MessageBox.Show("Status updated successfully.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rows were updated.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to change the status.");
             }
         }
     }

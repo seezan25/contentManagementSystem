@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using RestSharp;
+using SAM.form;
+using System.Data.SqlClient;
+
 namespace ContentManagement.UserControls
 {
     public partial class uploaderUploadContentPage : UserControl
@@ -65,6 +68,55 @@ namespace ContentManagement.UserControls
                 selectedFilePath = openFileDialog.FileName; // Assign the value to the class-level variable
                 textBox3.Text = selectedFilePath;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                try
+                {
+                    DateTime uploadDate = DateTime.Now;
+                    int status = 0; // Set initial status as needed
+
+                    using (SqlConnection connection = new SqlConnection(dbConnect.strConnString))
+                    {
+                        connection.Open();
+
+                        // SQL query to insert the file data into the database
+                        string insertQuery = "INSERT INTO Contents (Name, Date, Status, Description) " +
+                                             "VALUES (@ContentName, @UploadDate, @Status,@Description)";
+
+                        using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                        {
+                            // Set parameters for the query
+                            command.Parameters.AddWithValue("@ContentName", textBox1.Text);
+                            command.Parameters.AddWithValue("@UploadDate", uploadDate);
+                            command.Parameters.AddWithValue("@Status", status);
+                            command.Parameters.AddWithValue("@Description", textBox3.Text);
+
+                            // Execute the query
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Content Uploaded to the Database");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a file and enter a name to save.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void uploaderUploadContentPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

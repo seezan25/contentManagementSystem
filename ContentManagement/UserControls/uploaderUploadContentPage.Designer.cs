@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,22 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(207, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.textBox3.Location = new System.Drawing.Point(86, 173);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 20);
+            this.textBox3.Size = new System.Drawing.Size(191, 20);
             this.textBox3.TabIndex = 12;
             // 
             // textBox1
@@ -67,12 +56,13 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(86, 241);
+            this.button1.Location = new System.Drawing.Point(86, 215);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 10;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
             // 
@@ -101,7 +91,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(169)))), ((int)(((byte)(173)))));
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -109,14 +98,13 @@
             this.Controls.Add(this.label1);
             this.Name = "uploaderUploadContentPage";
             this.Size = new System.Drawing.Size(305, 337);
+            this.Load += new System.EventHandler(this.uploaderUploadContentPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
