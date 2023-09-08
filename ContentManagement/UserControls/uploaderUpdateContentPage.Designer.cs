@@ -87,7 +87,7 @@
             this.SN,
             this.contentName,
             this.content});
-            this.dataGridView1.Location = new System.Drawing.Point(514, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(473, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(342, 496);
             this.dataGridView1.TabIndex = 3;
@@ -114,9 +114,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(952, 136);
+            this.panel1.Location = new System.Drawing.Point(857, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 337);
+            this.panel1.Size = new System.Drawing.Size(467, 536);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 

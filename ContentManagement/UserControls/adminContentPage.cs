@@ -20,6 +20,7 @@ namespace ContentManagement.UserControls
         private SqlConnection connection;
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
+        private adminReadContentPage adminReadContent;
 
         public adminContentPage()
         {
@@ -95,6 +96,8 @@ namespace ContentManagement.UserControls
 
         private void button4_Click(object sender, EventArgs e)
         {
+            adminReadContent = new adminReadContentPage();
+            addUserControl (adminReadContent);
             // Get the selected rows from the DataGridView
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {

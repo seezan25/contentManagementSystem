@@ -69,3 +69,6 @@ D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentMan
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.UploaderUploaderPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.UploaderVerifierPage.resources
 D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.VerifierVerifierPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.adminReadContentPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderReadContentPage.resources
+D:\6th semester\C_Sharp\ContentManagement\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierReadContentPage.resources

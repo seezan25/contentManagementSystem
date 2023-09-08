@@ -18,6 +18,15 @@ namespace ContentManagement.UserControls
         private SqlConnection connection;
         private SqlDataAdapter dataAdapter;
         private DataTable dataTable;
+        private verifierContentPage verifierContent;
+        private verifierReadContentPage verifierReadContent;
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         public verifierContentPage()
         {
             InitializeComponent();
@@ -88,6 +97,12 @@ namespace ContentManagement.UserControls
             {
                 MessageBox.Show("Please select a row to change the status.");
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            verifierReadContent = new verifierReadContentPage();
+            addUserControl(verifierReadContent);
         }
     }
     }

@@ -47,7 +47,7 @@ namespace ContentManagement.UserControls
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(298, 51);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(722, 536);
+            this.dataGridView1.Size = new System.Drawing.Size(543, 536);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -92,9 +92,9 @@ namespace ContentManagement.UserControls
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(1038, 154);
+            this.panel1.Location = new System.Drawing.Point(876, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(305, 337);
+            this.panel1.Size = new System.Drawing.Size(467, 536);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
