@@ -28,7 +28,7 @@ namespace ContentManagement.UserControls
                         connection.Open();
 
                     // Define your INSERT SQL statement
-                    string insertQuery = "INSERT INTO uploaders (Name, Phone_no,Address,Username,Password,Email) VALUES (@UploaderName, @UploaderPhone,@UploaderAddress,@UploaderUsername,@UploaderPassword,'NULL')";
+                    string insertQuery = "INSERT INTO uploaders (Name, Phone_no,Address,Username,Password) VALUES (@UploaderName, @UploaderPhone,@UploaderAddress,@UploaderUsername,@UploaderPassword)";
                         using (SqlCommand command = new SqlCommand(insertQuery, connection))
                         {
                             // Set parameter values from your form inputs

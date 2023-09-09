@@ -33,7 +33,7 @@ namespace ContentManagement.UserControls
                     connection.Open();
 
                     // Define your INSERT SQL statement
-                    string insertQuery = "INSERT INTO Verifiers (Name, Phone_no,Address,Username,Password,Email) VALUES (@VerifierName, @VerifierPhone,@VerifierAddress,@VerifierUsername,@VerifierPassword,'NULL')";
+                    string insertQuery = "INSERT INTO Verifiers (Name, Phone_no,Address,Username,Password) VALUES (@VerifierName, @VerifierPhone,@VerifierAddress,@VerifierUsername,@VerifierPassword)";
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
                         // Set parameter values from your form inputs

@@ -16,10 +16,8 @@ namespace ContentManagement.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Path { get; set; }
-        public Nullable<int> VerifierId { get; set; }
-        public int UploaderId { get; set; }
         public System.DateTime Date { get; set; }
         public bool Status { get; set; }
+        public string Description { get; set; }
     }
 }

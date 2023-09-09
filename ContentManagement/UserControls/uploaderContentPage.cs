@@ -21,6 +21,7 @@ namespace ContentManagement.UserControls
         private DataTable dataTable;
         private uploaderUploadContentPage UploaderUploadContentPage;
         private uploaderEditContentPage UploaderEditContentPage;
+        private readContent ReadContent;
         public uploaderContentPage()
         {
             InitializeComponent();
@@ -90,6 +91,76 @@ namespace ContentManagement.UserControls
                 UploaderEditContentPage.textBox3.Text = string.Empty;
             }
             addUserControl(UploaderEditContentPage);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ReadContent = new readContent();
+            // Check if a row is selected
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Get the selected row (assuming you want to show data from the first selected row)
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Assuming you have columns named "FilePath" and "FileData" in your DataGridView
+                string fileName = selectedRow.Cells["Name"].Value.ToString();
+                string fileDescription = selectedRow.Cells["Description"].Value.ToString();
+
+                // Display the file path in the txtFilePath TextBox
+
+           
+                ReadContent.textBox3.Text = fileDescription;
+            }
+            else
+            {
+                // Clear the TextBoxes if no row is selected
+
+   
+                ReadContent.textBox3.Text = string.Empty;
+            }
+            addUserControl(ReadContent);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Create a SaveFileDialog to allow the user to choose where to save the text file
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Text Files|*.txt";
+                saveFileDialog.Title = "Save Text File";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        string fileName = saveFileDialog.FileName;
+
+                        // Create a StringBuilder to store the text data
+                        StringBuilder sb = new StringBuilder();
+
+                        // Iterate through the selected rows in the DataGridView
+                        foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                        {
+                            // Assuming you have DataGridView columns named "Column1" and "Column2"
+                            string column1Value = row.Cells["Name"].Value.ToString();
+                            string column2Value = row.Cells["Description"].Value.ToString();
+
+                            // Append the data to the StringBuilder
+                            sb.AppendLine($"File Source Name: {column1Value}");
+                            sb.AppendLine($" Content: {column2Value}");
+                        }
+
+                        // Write the content to the selected file
+                        File.WriteAllText(fileName, sb.ToString(), Encoding.UTF8);
+
+                        MessageBox.Show("Text file saved successfully!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error saving the text file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

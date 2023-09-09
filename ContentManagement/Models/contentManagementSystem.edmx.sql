@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/02/2023 10:05:43
--- Generated from EDMX file: D:\6th semester\C_Sharp\ContentManagement\ContentManagement\Models\contentManagementSystem.edmx
+-- Date Created: 09/09/2023 12:14:46
+-- Generated from EDMX file: D:\projects\contentManagementSystem\ContentManagement\Models\contentManagementSystem.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -22,6 +22,18 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Admins]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Admins];
+GO
+IF OBJECT_ID(N'[dbo].[Uploaders]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Uploaders];
+GO
+IF OBJECT_ID(N'[dbo].[Verifiers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Verifiers];
+GO
+IF OBJECT_ID(N'[dbo].[Contents]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Contents];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -42,8 +54,7 @@ CREATE TABLE [dbo].[Uploaders] (
     [Password] nvarchar(max)  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Phone_no] nvarchar(max)  NOT NULL,
-    [Address] nvarchar(max)  NOT NULL,
-    [Email] nvarchar(max)  NOT NULL
+    [Address] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -54,8 +65,7 @@ CREATE TABLE [dbo].[Verifiers] (
     [Password] nvarchar(max)  NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
     [Phone_no] nvarchar(max)  NOT NULL,
-    [Address] nvarchar(max)  NOT NULL,
-    [Email] nvarchar(max)  NOT NULL
+    [Address] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -63,11 +73,9 @@ GO
 CREATE TABLE [dbo].[Contents] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
-    [Path] nvarchar(max)  NOT NULL,
-    [VerifierId] int  NULL,
-    [UploaderId] int  NOT NULL,
     [Date] datetime  NOT NULL,
-    [Status] bit  NOT NULL
+    [Status] bit  NOT NULL,
+    [Description] varchar(max)  NULL
 );
 GO
 

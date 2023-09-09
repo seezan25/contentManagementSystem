@@ -20,6 +20,5 @@ namespace ContentManagement.Models
         public string Name { get; set; }
         public string Phone_no { get; set; }
         public string Address { get; set; }
-        public string Email { get; set; }
     }
 }
