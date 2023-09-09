@@ -201,6 +201,12 @@
     <Compile Include="UserControls\adminViewNotificationPage.Designer.cs">
       <DependentUpon>adminViewNotificationPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\contentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\contentUserControl.Designer.cs">
+      <DependentUpon>contentUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\readContent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\adminViewNotificationPage.resx">
       <DependentUpon>adminViewNotificationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\contentUserControl.resx">
+      <DependentUpon>contentUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\readContent.resx">
       <DependentUpon>readContent.cs</DependentUpon>

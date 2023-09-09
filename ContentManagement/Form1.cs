@@ -21,6 +21,7 @@ namespace ContentManagement
         private uploaderPage uploaderpage;
         private verifierPage verifierpage;
         private dbConnect DbConnect;
+        private contentUserControl ContentUserControl;
 
         private void addUserControl(UserControl userControl)
         {
@@ -225,6 +226,12 @@ namespace ContentManagement
             textBox3.Text = "";
             textBox4.Text = "";
             comboBox3.Text = "Admin";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ContentUserControl = new contentUserControl();
+            addUserControl(ContentUserControl);
         }
     }
 }

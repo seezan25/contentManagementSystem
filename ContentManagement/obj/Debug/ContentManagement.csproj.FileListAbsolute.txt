@@ -143,3 +143,4 @@ D:\projects\contentManagementSystem\ContentManagement\obj\Debug\ContentManagemen
 D:\projects\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.exe
 D:\projects\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.pdb
 D:\projects\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.readContent.resources
+D:\projects\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.contentUserControl.resources
