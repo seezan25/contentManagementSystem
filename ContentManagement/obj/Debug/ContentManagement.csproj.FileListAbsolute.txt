@@ -174,7 +174,6 @@ D:\6th semester\contentManagementSystem\ContentManagement\bin\Debug\System.Value
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.AssemblyReference.cache
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.SuggestedBindingRedirects.cache
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.exe.config
-D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\Interop.Acrobat.dll
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.ResolveComReference.cache
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.Form1.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.Properties.Resources.resources
@@ -197,14 +196,13 @@ D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManag
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.uploaderUploadContentPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.UploaderUploaderPage.resources
-D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.UploaderVerifierPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierContentPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierHomePage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierPage.resources
-D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.verifierUploaderPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.UserControls.VerifierVerifierPage.resources
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.GenerateResource.cache
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.CoreCompileInputs.cache
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.csproj.CopyComplete
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.exe
 D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\ContentManagement.pdb
+D:\6th semester\contentManagementSystem\ContentManagement\obj\Debug\Interop.Acrobat.dll

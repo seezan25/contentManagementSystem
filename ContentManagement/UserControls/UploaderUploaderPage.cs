@@ -24,7 +24,7 @@ namespace ContentManagement.UserControls
                     connection.Open();
 
                     // Define your SQL query to retrieve limited columns from the "uploaders" table
-                    string selectQuery = "SELECT Username, Password,Name,Address,Phone_no FROM uploaders";
+                    string selectQuery = "SELECT Username,Name,Address,Phone_no FROM Uploaders";
 
                     using (SqlCommand command = new SqlCommand(selectQuery, connection))
                     {

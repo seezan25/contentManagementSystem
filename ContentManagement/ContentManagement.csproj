@@ -237,12 +237,6 @@
     <Compile Include="UserControls\UploaderUploaderPage.Designer.cs">
       <DependentUpon>UploaderUploaderPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UploaderVerifierPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UploaderVerifierPage.Designer.cs">
-      <DependentUpon>UploaderVerifierPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\verifierContentPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,12 +254,6 @@
     </Compile>
     <Compile Include="UserControls\verifierPage.Designer.cs">
       <DependentUpon>verifierPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\verifierUploaderPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\verifierUploaderPage.Designer.cs">
-      <DependentUpon>verifierUploaderPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\VerifierVerifierPage.cs">
       <SubType>UserControl</SubType>
@@ -342,9 +330,6 @@
     <EmbeddedResource Include="UserControls\UploaderUploaderPage.resx">
       <DependentUpon>UploaderUploaderPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UploaderVerifierPage.resx">
-      <DependentUpon>UploaderVerifierPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\verifierContentPage.resx">
       <DependentUpon>verifierContentPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,9 +338,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\verifierPage.resx">
       <DependentUpon>verifierPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\verifierUploaderPage.resx">
-      <DependentUpon>verifierUploaderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\VerifierVerifierPage.resx">
       <DependentUpon>VerifierVerifierPage.cs</DependentUpon>
