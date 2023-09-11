@@ -14,8 +14,6 @@ namespace ContentManagement.UserControls
     {
         private uploaderContentPage uploaderContent;
         private uploaderHomePage uploaderHome;
-        private uploaderNotificationPage uploaderNotification;
-        private uploaderUploadPage uploaderUpload;
         private UploaderUploaderPage uploaderUploader;
         private VerifierVerifierPage verifierVerifier;
         public uploaderPage()
@@ -48,17 +46,6 @@ namespace ContentManagement.UserControls
             addUserControl(uploaderContent);
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-            uploaderUpload = new uploaderUploadPage();
-            addUserControl(uploaderUpload);
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-            uploaderNotification = new uploaderNotificationPage();  
-            addUserControl(uploaderNotification);   
-        }
 
         private void label13_Click(object sender, EventArgs e)
         {

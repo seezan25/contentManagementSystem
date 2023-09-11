@@ -13,7 +13,6 @@ namespace ContentManagement.UserControls
     public partial class verifierPage : UserControl
     {
         private verifierHomePage verifierHome;
-        private verifierNotificationPage verifierNotification;
         private verifierUploaderPage verifierUploader;
         private verifierContentPage verifiercontent;
         private VerifierVerifierPage verifierVerifier;
@@ -54,11 +53,7 @@ namespace ContentManagement.UserControls
             addUserControl(verifierUploader);
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-            verifierNotification = new verifierNotificationPage();
-            addUserControl(verifierNotification);
-        }
+       
 
         private void label13_Click(object sender, EventArgs e)
         {

@@ -14,7 +14,6 @@ namespace ContentManagement.UserControls
     {
         private adminHomePage adminHome;
         private adminContentPage adminContent;
-        private adminNotificationPage adminNotification;
         private adminVerifierPage adminVerifier;
         private adminUploaderPage adminUploader;
         public adminPage()
@@ -53,12 +52,6 @@ namespace ContentManagement.UserControls
         {
             adminUploader = new adminUploaderPage();
             addUserControl(adminUploader);
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            adminNotification = new adminNotificationPage();    
-            addUserControl(adminNotification);
         }
 
         private void label6_Click(object sender, EventArgs e)
