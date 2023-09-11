@@ -40,11 +40,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(330, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(317, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(639, 536);
+            this.dataGridView1.Size = new System.Drawing.Size(655, 536);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -53,7 +53,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(185, 157);
+            this.button1.Location = new System.Drawing.Point(139, 157);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 48);
             this.button1.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(185, 295);
+            this.button2.Location = new System.Drawing.Point(139, 295);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 48);
             this.button2.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(106)))), ((int)(((byte)(123)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(185, 420);
+            this.button3.Location = new System.Drawing.Point(139, 420);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(133, 48);
             this.button3.TabIndex = 3;
